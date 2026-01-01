@@ -1,9 +1,8 @@
-// Wait until HTML loads
 window.addEventListener('DOMContentLoaded', () => {
     const welcome = document.getElementById('welcome');
     const sections = document.querySelectorAll('section');
 
-    // Fade-in welcome + typing effect
+    // Fade-in + typing
     welcome.style.opacity = 0;
     welcome.style.transform = "translateY(-50px)";
     welcome.style.transition = "all 1s ease";

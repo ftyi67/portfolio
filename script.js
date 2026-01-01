@@ -55,3 +55,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     elements.forEach(el => observer.observe(el));
 });
+//JFBVJ
+document.addEventListener("DOMContentLoaded", () => {
+    // كنجبدو كاع الـ li اللي كاينين فالموقع
+    const listItems = document.querySelectorAll("li");
+
+    listItems.forEach(item => {
+        // كنأكدو أن كل عنصر عندو transition باش الحركة تكون رطبة
+        item.style.transition = "all 0.3s ease";
+        
+        // إلا بغيتي تزيد شي حاجة بالـ JS فاش يدوز الكيرسور
+        item.addEventListener("mouseenter", () => {
+            item.style.transform = "translateX(-15px)";
+        });
+
+        item.addEventListener("mouseleave", () => {
+            item.style.transform = "translateX(0)";
+        });
+    });
+});

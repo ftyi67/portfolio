@@ -40,3 +40,18 @@ window.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', checkVisibility);
     checkVisibility(); // initial check
 });
+document.addEventListener("DOMContentLoaded", () => {
+    // كنقلبو على كاع الـ sections والـ li
+    const elements = document.querySelectorAll('section, li');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // إلا بان العنصر فالفيديو (Viewport)
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 }); // كيبدا ملي كيبان 10% من العنصر
+
+    elements.forEach(el => observer.observe(el));
+});

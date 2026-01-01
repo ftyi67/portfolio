@@ -30,7 +30,7 @@ header {
 }
 
 section {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(50px);
   transition: all 1s ease;
   padding: 20px;
@@ -72,3 +72,4 @@ li {
 .dark section {
   background: #1e1e1e;
 }
+

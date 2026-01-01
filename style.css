@@ -56,6 +56,28 @@ section {
 .dark section {
   background: #1e1e1e;
 }
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+    margin: 50px 0;
+    text-align: right; /* li bghiti Arabic text right-aligned */
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+}
+
 
 
 

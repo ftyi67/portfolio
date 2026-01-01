@@ -72,63 +72,42 @@ li {
 
 .dark section {
   background: #1e1e1e;
-}/* كيستهدف أي li كاين وسط أي section في الموقع */
-section ul li {
-    list-style: none; /* حيد النقط */
-    margin: 15px 0;
-    padding: 12px 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out !important; /* سرعة الحركة رطبة */
-    cursor: pointer;
-    width: 100%; /* كياخد العرض كامل ديال السطر */
-    max-width: 400px; /* باش ما يجيش طويل بزاف */
-    margin-right: 0; /* كيبقا لاصق فليمن */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* خيال خفيف فالبداية */
+}/* 1. تأكد أن كاع الأقسام باينة وما مخبيها والو */
+section {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+    direction: rtl !important; /* باش يبقى الترتيب د العربية */
+    text-align: right !important;
 }
 
-/* التأثير ملي كتحط الكيرسور (Hover) */
-section ul li:hover {
-    transform: translateX(-20px); /* كيتحرك لليسر (لقدام بالنسبة للعربية) */
-    background-color: #00adb5; /* نفس اللون اللي مستعمل فـ nav */
-    color: #ffffff !important; /* الكتابة كتولي بيضاء باش تبان */
-    box-shadow: -10px 0px 20px rgba(0, 173, 181, 0.4); /* ضوء خلفي أزرق شاع */
-}
-section ul li:hover a {
-    color: white !important;
-}
-//* هاد الكود كيطبق التأثير على المهارات (li) وأي حاجة سميتها مشروع (.project) */
-section ul li, 
-.project, 
-#Projets div {
-    list-style: none !important;
+/* 2. هاد الكود كيطبق "الخفة والضو" على المهارات والمشاريع دقة وحدة */
+li, .project, section > div {
+    list-style: none !important; /* حيد النقط */
     margin: 15px 0 !important;
-    padding: 15px 20px !important;
-    background-color: #ffffff !important;
-    border-radius: 10px !important;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    padding: 15px 25px !important;
+    background-color: #ffffff !important; /* اللون العادي قبل ما تحط السهم */
+    border-radius: 12px !important;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important; /* حركة رطبة */
     cursor: pointer !important;
-    display: block !important;
-    width: 100% !important;
-    max-width: 500px !important;
-    margin-left: auto !important; /* حيت نتا داير الكتابة على اليمين */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
+    max-width: 550px !important;
+    margin-left: auto !important; /* باش يبقاو جيهت اليمين */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
+    border: 1px solid #eee !important;
 }
 
-/* التأثير ملي كتحط الكيرسور على أي واحد فيهم */
-section ul li:hover, 
-.project:hover, 
-#Projets div:hover {
-    transform: translateX(-20px) !important; /* كيخرج لليسر */
-    background-color: #00adb5 !important; /* اللون الأزرق ديالك */
-    color: white !important;
-    box-shadow: -15px 0px 30px rgba(0, 173, 181, 0.6) !important; /* الضوء الخلفي */
+/* 3. تأثير "كحل مخلط مع أبيض" (Black/Grey Mix) والضو لور ملي كتدوز السهم */
+li:hover, .project:hover, section > div:hover {
+    /* لون كحل مخلط (Dark Gradient) كيعطي هاداك المنظر اللي بغيتي */
+    background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%) !important;
+    color: #ffffff !important; /* الكتابة تولي بيضاء باش تبان فوق الكحل */
+    transform: translateX(-20px) scale(1.02) !important; /* كيخرج للقدام بجهد */
+    box-shadow: -15px 10px 30px rgba(0, 0, 0, 0.5) !important; /* ضوء خلفي غامق ومشاع */
 }
 
-/* صلح لون الرابط داخل المشاريع */
-.project:hover a, 
-#Projets div:hover a {
-    color: white !important;
+/* صلح لون الروابط (بحال Voir le site) باش يولي أبيض فاش تضوي الكارت */
+li:hover a, .project:hover a {
+    color: #ffffff !important;
 }
 
 

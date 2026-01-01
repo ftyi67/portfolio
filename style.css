@@ -94,6 +94,9 @@ section ul li:hover {
     color: #ffffff !important; /* الكتابة كتولي بيضاء باش تبان */
     box-shadow: -10px 0px 20px rgba(0, 173, 181, 0.4); /* ضوء خلفي أزرق شاع */
 }
+section ul li:hover a {
+    color: white !important;
+}
 
 
 

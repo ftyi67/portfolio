@@ -60,7 +60,26 @@ ul {
   padding: 0;
 }
 
+li {/* هاد الجزء كيقاد الحالة العادية ديال القائمة */
 li {
+    margin: 10px 0;
+    padding: 10px;
+    transition: all 0.4s ease; /* هادي ضرورية باش الحركة تكون رطبة */
+    cursor: pointer;
+    border-radius: 8px;
+    display: block; /* باش التأثير ياخد السطر كامل */
+    width: fit-content; /* باش الضوء يكون غير على قد الكلمة */
+    margin-left: auto; /* حيت نتا داير الكتابة على اليمين */
+}
+
+/* هاد الجزء هو اللي كيدير الحركة والضوء ملي كتحط الكيرسور */
+li:hover {
+    transform: translateX(-20px); /* كتخرج الكتابة لليسر (القدام) حيت نتا داير RTL */
+    background-color: rgba(0, 173, 181, 0.1); /* لون خفيف فالبلاصة */
+    box-shadow: 0px 4px 15px rgba(0, 173, 181, 0.5); /* الضوء الخلفي */
+    color: #00adb5; /* كيتبدل لون الكتابة للون اللي مستعمل فـ Nav */
+    padding-right: 20px;
+}
   margin: 5px 0;
 }
 
@@ -72,4 +91,5 @@ li {
 .dark section {
   background: #1e1e1e;
 }
+
 

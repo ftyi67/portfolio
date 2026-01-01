@@ -38,7 +38,7 @@ section {
   background: white;
   border-radius: 5px;
   text-align: right;
-  direction: rtl;
+  direction: rtl; /* for Arabic text */
 }
 
 section.visible {

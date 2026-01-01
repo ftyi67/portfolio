@@ -48,5 +48,14 @@ section {
   transform: translateY(30px);
   transition: 0.6s ease;
 }
+.dark {
+  background: #121212;
+  color: white;
+}
+
+.dark section {
+  background: #1e1e1e;
+}
+
 
 

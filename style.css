@@ -1,9 +1,12 @@
+/* Base */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background: #f4f4f4;
 }
+
+/* Navigation */
 nav {
   background: #111;
   padding: 15px;
@@ -21,6 +24,7 @@ nav a:hover {
   color: #00adb5;
 }
 
+/* Header */
 header {
   background: #222;
   color: white;
@@ -28,26 +32,47 @@ header {
   text-align: center;
 }
 
+/* Sections */
 section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
   padding: 20px;
-  margin: 20px;
+  margin: 50px 20px;
   background: white;
   border-radius: 5px;
+  text-align: right; /* Arabic text right-aligned */
+  direction: rtl;    /* Arabic text direction */
 }
 
+/* Visible class for fade-in on scroll */
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Headings */
 h2 {
   color: #333;
 }
 
+/* Projects links */
 .project a {
   color: blue;
   text-decoration: none;
 }
-section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 0.6s ease;
+
+/* Lists */
+ul {
+  list-style-type: none;
+  padding: 0;
 }
+
+li {
+  margin: 5px 0;
+}
+
+/* Dark mode */
 .dark {
   background: #121212;
   color: white;
@@ -56,28 +81,3 @@ section {
 .dark section {
   background: #1e1e1e;
 }
-section {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 1s ease;
-    margin: 50px 0;
-    text-align: right; /* li bghiti Arabic text right-aligned */
-}
-
-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin: 5px 0;
-}
-
-
-
-
